@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soineshko Studio — Професійна фотостудія | Тернопіль</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.6/dist/iconset.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css"> 
+    
+</head>
+<body>
+    <div id="success-message">
+        <i class="h-check-circle"></i>
+        <span>Дякуємо! Ваша заявка в Soineshko Studio успішно надіслана.</span>
+    </div>
+
+    <header>
+        <div class="nav container">
+            <a href="#home" class="logo">Soineshko Studio</a>
+            <nav>
+                <a href="#home" class="active">Головна</a>
+                <a href="#services">Послуги</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#booking">Бронювання</a>
+                <a href="#contact">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-text">
+                <h1>Ваша історія в об'єктиві <span>Soineshko Studio</span></h1>
+                <p>Професійна фотостудія у Тернополі. Створюємо атмосферу, де кожен кадр — це емоція, мистецтво та стиль. Зафіксуйте свої найважливіші моменти з нами.</p>
+                <a href="#booking" class="btn">Забронювати фотосесію</a>
+            </div>
+            <div class="hero-image-wrap">
+                <img src="https://solovetskie.com/wp-content/uploads/2020/05/r_s2020_03.jpg" alt="Сучасний інтер'єр фотостудії Soineshko">
+            </div>
+        </section>
+        
+        <hr style="border-color: #161e2c; opacity: 0.5;">
+
+        <section class="section" id="services">
+            <div class="container">
+                <h2>Наші послуги</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <i class="h-user-circle"></i>
+                        <h3>Портретна зйомка</h3>
+                        <p>Індивідуальні фотосесії, бізнес-портрети. Професійне студійне світло та авторська обробка.</p>
+                    </div>
+                    <div class="card">
+                        <i class="h-users"></i>
+                        <h3>Сімейні та дитячі фото</h3>
+                        <p>Теплі, живі та емоційні кадри з вашими рідними та маленькими зірочками.</p>
+                    </div>
+                    <div class="card">
+                        <i class="h-heart"></i>
+                        <h3>Весільна зйомка</h3>
+                        <p>Збережемо магію та найщасливіші моменти вашого особливого дня назавжди.</p>
+                    </div>
+                    <div class="card">
+                        <i class="h-cube"></i>
+                        <h3>Оренда студії</h3>
+                        <p>Погодинна оренда сучасної, обладнаної студії з унікальними декораціями та фонами.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="gallery" style="background: var(--card);">
+            <div class="container">
+                <h2>Галерея робіт</h2>
+                <div class="gallery">
+                    <div class="gallery-item"><img src="https://picsum.photos/400/500?random=1" alt="Портрет у студії"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/500?random=2" alt="Сімейна фотосесія"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/500?random=3" alt="Весільне фото"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/500?random=4" alt="Модельне портфоліо"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/500?random=5" alt="Студійне фото з твариною"></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/500?random=6" alt="Арт-фотографія"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="booking">
+            <div class="container">
+                <h2>Забронюйте свою ідеальну зйомку</h2>
+                <div class="booking-card">
+                    <form id="booking-form" action="https://formspree.io/f/xeoykpvz" method="POST">
+                        <label for="name">Ваше ім'я</label>
+                        <input type="text" id="name" name="Ім'я" placeholder="Іван" required>
+
+                        <label for="contact">Email або Телефон</label>
+                        <input type="text" id="contact" name="Контакт" placeholder="example@gmail.com або +380XX XXX XX XX" required>
+                        
+                        <label for="type">Тип зйомки</label>
+                        <select id="type" name="Тип зйомки" required>
+                            <option value="" disabled selected>Оберіть послугу</option>
+                            <option value="Портретна зйомка">Портретна зйомка</option>
+                            <option value="Сімейна/Дитяча">Сімейна/Дитяча</option>
+                            <option value="Весільна зйомка">Весільна зйомка</option>
+                            <option value="Оренда студії">Оренда студії</option>
+                        </select>
+
+                        <label for="date">Бажана дата</label>
+                        <input type="date" id="date" name="Бажана дата" required>
+
+                        <label for="comment">Додаткові деталі (час, кількість осіб, ідеї)</label>
+                        <textarea id="comment" name="Коментар" placeholder="Бажаний час 14:00, 3 особи, ідея з чорним фоном..."></textarea>
+                        
+                        <input type="text" name="_gotcha" style="display:none" />
+
+                        <button type="submit" class="btn">Надіслати заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <h3>Контакти та Соцмережі</h3>
+            <div class="contact-links">
+                <a href="https://t.me/fsophi" target="_blank" class="contact-link">
+                    <i class="h-paper-airplane"></i>
+                    Telegram: @fsophi
+                </a>
+                <a href="https://instagram.com/sophi_kurtyf" target="_blank" class="contact-link">
+                    <i class="h-camera"></i>
+                    Instagram: @sophi_kurtyf
+                </a>
+                <a href="https://maps.app.goo.gl/YourMapLink" target="_blank" class="contact-link">
+                    <i class="h-location-marker"></i>
+                    Тернопіль, вул. Ваша, 1
+                </a>
+            </div>
+            <p class="copyright">© 2025 **Soineshko Studio**. Створення — Емоції. Мистецтво. Стиль.</p>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
